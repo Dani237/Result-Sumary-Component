@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 :root {
-    --l-red: hsl(0, 100%, 67%);
-    --orange-yellow: hsl(39, 100%, 56%);
-    --green-teal: hsl(166, 100%, 37%);
-    --cobalt-blue: hsl(234, 85%, 45%);
+    --l-red: rgb(255, 87, 87);
+    --orange-yellow: rgb(255, 176, 31);
+    --green-teal: rgb(0, 189, 145);
+    --cobalt-blue: rgb(17, 37, 212);
 
     --l-s-blue: hsl(252, 100%, 67%);
     --l-r-blue: hsl(241, 81%, 54%);
@@ -24,6 +24,123 @@ html  {
     font-size: 62.5%;
 }
 *, *:before, *:after { box-sizing: inherit; }
-h1, h2, h3 {
+h1, h2, h3, p {
     margin: 0;
+}
+body {
+    font-size: 1.8rem;
+    font-family: var(--principal-font);
+}
+
+/* RESULT CARD */
+.result-card {
+    background-color: var(--l-s-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 0;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+.result-title {
+    font-size: 2.5rem;
+    color: var(--light-lavender)
+}
+.result-data {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: var(--cobalt-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result-data p {
+    font-size: 5.5rem;
+    color: white;
+    font-weight: 800;
+}
+.result-data span {
+    color: var(--light-lavender);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.result-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result-description h2 {
+    color: white;
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.result-description p {
+    max-width: 30rem;
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+/* SUMARY CARD */
+.sumary-card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3rem;
+}
+.sumary-title {
+    font-size: 2rem;
+}
+.icon-word {
+    display: flex;
+    gap: 1rem;
+}
+.data {
+    /* border: 1px solid red; */
+    border-radius: 1rem;
+    padding: 1.7rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.reaction .icon-word span{
+    color: var(--l-red);
+}
+.reaction {
+    background-color: rgba(255, 87, 87, .05);
+}
+.memory .icon-word span{
+    color: var(--orange-yellow);
+}
+.memory {
+    background-color: rgba(255, 176, 31, .05);
+}
+.verbal .icon-word span{
+    color: var(--green-teal);
+}
+.verbal {
+    background-color: rgba(0, 189, 145, .05);
+}
+.visual .icon-word span{
+    color: var(--cobalt-blue);
+}
+.visual {
+    background-color: rgba(17, 37, 212, .05);
+}
+.bold-number, .number {
+    font-weight: 800;
+} 
+.number {
+    color: rgb(176, 176, 176);
+}
+
+/* SUMARY BUTTON */
+.sumary-button {
+    margin-top: 2.2rem;
+    border-radius: 3rem;
+    padding: 1.8rem 0;
+    background-color: var(--d-g-blue);
+    text-align: center;
+    color: white;   
 }
